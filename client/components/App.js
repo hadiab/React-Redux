@@ -1,7 +1,17 @@
 import React from 'react';
+import NavigationBar from './NavigationBar';
 
-export default () => {
-	return (
-		<h1>Hello World Form React App Component</h1>	
-	);
+class App extends React.Component {
+	render(){
+		return (
+			<div>
+				<NavigationBar />
+				<div className="container">
+					{this.props.children}
+				</div>
+			</div>
+		);
+	}
 }
+
+export default App;

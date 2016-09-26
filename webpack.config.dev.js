@@ -1,4 +1,5 @@
 import path from 'path';
+import webpack from 'webpack';
 
 export default {
 	dectools: 'eval-source-map',
@@ -6,6 +7,10 @@ export default {
 	output: {
 		path: '/'
 	},
+	pulgins: [
+		new webpack.NoErrorsPlugin(),
+		new webpack.optimize.OccurenceOrderPlugin(),
+	],
 	module: {
 		loaders: [
 			{
